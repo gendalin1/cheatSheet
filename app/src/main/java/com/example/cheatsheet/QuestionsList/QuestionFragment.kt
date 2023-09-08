@@ -27,7 +27,6 @@ class QuestionFragment : Fragment() {
     ): View? {
 
         binding = FragmentFirstBinding.inflate(inflater, container, false)
-
         binding.recycler.adapter = adapter
 
 
