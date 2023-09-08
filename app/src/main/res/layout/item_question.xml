@@ -14,21 +14,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="25dp"
         android:layout_marginStart="16dp"
-        android:elevation="10dp"
+        android:elevation="0dp"
+        android:background="@drawable/question_background"
         android:layout_marginBottom="15dp"
         android:layout_marginTop="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.example.cheatsheet.util.ProgressLoad
-            android:id="@+id/animation"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:setGradientParams="@{gradientParams}" />
 
         <TextView
             android:id="@+id/number"
@@ -36,6 +28,8 @@
             android:layout_height="wrap_content"
             android:text="Вопрос №"
             android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:textColor="@color/textColor"
             android:fontFamily="@font/roboto_500"
             app:layout_constraintTop_toTopOf="parent"
@@ -48,6 +42,8 @@
             android:layout_height="wrap_content"
             android:text="Описание запроса"
             android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:textSize="16sp"
             android:textColor="@color/textColor"
             android:fontFamily="@font/roboto_500"
@@ -62,10 +58,11 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/question"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            app:layout_constraintTop_toBottomOf="@+id/question" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
