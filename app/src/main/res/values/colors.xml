@@ -22,4 +22,8 @@
     <color name="transparent_black">#55000000</color>
     <color name="azure">#5685FF</color>
     <color name="transparent">#00ffffff</color>
+
+    <color name="hintColor">#959595</color>
+
+    <color name="textColor">#333333</color>
 </resources>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="16dp"
+        android:elevation="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Вопрос №"
+            android:textSize="20sp"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/roboto_500"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Описание запроса"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/roboto_500"
+            app:layout_constraintTop_toBottomOf="@id/number"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:overScrollMode="never"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/question"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--<androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/indicator_tink"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:paddingBottom="15dp"
+            >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Название"
+                android:textColor="@color/textColor"
+                android:fontFamily="@font/roboto_500"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/stars_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/appColor"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name">
+
+                <TextView
+                    android:id="@+id/stars"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="6dp"
+                    android:paddingEnd="6dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:fontFamily="@font/roboto_400"
+                    android:gravity="center"
+                    android:text="5"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/name"
+                    android:textSize="12sp" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/reviews_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/roboto_400"
+                android:text="100 отзывов"
+                android:textColor="#333333"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/stars_card"
+                app:layout_constraintStart_toEndOf="@id/stars_card"
+                app:layout_constraintTop_toTopOf="@id/stars_card" />
+
+            <ImageView
+                android:id="@+id/review_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                app:layout_constraintStart_toEndOf="@+id/reviews_count"
+                app:layout_constraintTop_toTopOf="@+id/stars_card"
+                app:layout_constraintBottom_toBottomOf="@+id/stars_card"
+                android:src="@drawable/ellipse"
+                />
+            <TextView
+                android:id="@+id/hotel_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/textColor"
+                android:layout_marginStart="2dp"
+                android:text ="Гостиница"
+                app:layout_constraintStart_toEndOf="@+id/review_point"
+                app:layout_constraintTop_toTopOf="@+id/stars_card"
+                app:layout_constraintBottom_toBottomOf="@+id/stars_card"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerAmenities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/stars_card"
+                />
+
+            <TextView
+                android:id="@+id/sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text ="Всего 4000 Р"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/roboto_500"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerAmenities"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+            <ImageView
+                android:id="@+id/point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                app:layout_constraintStart_toEndOf="@+id/sum"
+                app:layout_constraintTop_toTopOf="@+id/sum"
+                app:layout_constraintBottom_toBottomOf="@+id/sum"
+                android:src="@drawable/ellipse"
+                />
+            <TextView
+                android:id="@+id/filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/textColorGrey"
+                android:layout_marginStart="2dp"
+                android:text ="2 ночи, 1 гость"
+                app:layout_constraintStart_toEndOf="@+id/point"
+                app:layout_constraintTop_toTopOf="@+id/sum"
+                app:layout_constraintBottom_toBottomOf="@+id/sum"
+                />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text ="4000 Р"
+                android:textColor="@color/textColorGrey"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/sum"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+            <TextView
+                android:id="@+id/slash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                app:layout_constraintStart_toEndOf="@+id/price"
+                app:layout_constraintTop_toTopOf="@+id/price"
+                app:layout_constraintBottom_toBottomOf="@+id/price"
+                android:text="/"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/textColorGrey"
+                android:layout_marginStart="2dp"
+                android:text ="ночь"
+                app:layout_constraintStart_toEndOf="@+id/slash"
+                app:layout_constraintTop_toTopOf="@+id/price"
+                app:layout_constraintBottom_toBottomOf="@+id/price"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

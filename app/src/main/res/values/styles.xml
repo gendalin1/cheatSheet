@@ -12,6 +12,7 @@
 
 
 
+
         <color name="colorAccent">#03DAC5</color>
         <item name="android:windowBackground">@color/colorBackground</item>
 
@@ -22,5 +23,19 @@
     <style name="AppTheme.MaterialDatePickerTheme" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
         <item name="colorPrimary">@color/appColor</item>
     </style>-->
+
+    <style name="editTextStyle">
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">38dp</item>
+        <item name="android:textColorHint">@color/hintColor</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:translationY">-1.04sp</item>
+        <item name="android:background">@drawable/edit_text_small</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">17sp</item>
+    </style>
 
 </resources>
