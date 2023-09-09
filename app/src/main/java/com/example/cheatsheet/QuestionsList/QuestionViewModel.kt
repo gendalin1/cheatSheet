@@ -20,7 +20,7 @@ class QuestionViewModel: ViewModel() {
 
     fun setQuestionList(_list: List<QuestionElement>){
         allQuestions = _list
-        _questionList.postValue(_list)
+        _questionList.postValue(updateData(_list))
     }
 
     fun updateSearch(_search: String ){

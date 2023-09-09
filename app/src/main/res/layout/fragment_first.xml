@@ -2,19 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
 
     <ImageView
-        android:id="@+id/scrollUp"
-        android:layout_width="45dp"
+        android:id="@+id/download"
+        android:layout_width="35dp"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         android:background="@color/backgroundColor"
         app:layout_constraintTop_toTopOf="@+id/search"
         app:layout_constraintBottom_toBottomOf="@+id/search"
-        android:src = "@drawable/up_arrow_filled_angle"
-        android:layout_marginStart="10dp"
+        android:src = "@drawable/download"
+        android:layout_marginStart="5dp"
         />
 
     <EditText
@@ -32,7 +33,7 @@
         android:inputType="text"
         android:imeOptions="actionDone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/scrollUp"
+        app:layout_constraintStart_toEndOf="@+id/download"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -59,5 +60,26 @@
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/scrollUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="3dp"
+        android:src="@drawable/arrow_up"
+        android:visibility="invisible"
+        app:backgroundTint="@color/transparent"
+        app:borderWidth="0dp"
+        app:elevation="0dp"
+        app:fabSize="normal"
+        app:hoveredFocusedTranslationZ="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="40dp"
+        app:pressedTranslationZ="0dp"
+        app:rippleColor="@color/transparent"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:visibility="visible"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
